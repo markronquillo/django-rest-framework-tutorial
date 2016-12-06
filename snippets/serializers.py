@@ -42,7 +42,7 @@ class SnippetSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    snippets = serializers.PrimaryKeyRelatedFields(many=True,
+    snippets = serializers.PrimaryKeyRelatedField(many=True,
                                                    queryset=Snippet.objects.all())
 
     class Meta:
